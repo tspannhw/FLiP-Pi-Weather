@@ -218,4 +218,8 @@ Schema info is: {
 2022-02-23 09:58:01.408 INFO  [3069385088] ClientConnection:256 | [192.168.1.203:41708 -> 192.168.1.230:6650] Destroyed connection
 2022-02-23 09:58:01.408 INFO  [3069385088] ClientConnection:256 | [192.168.1.203:41710 -> 192.168.1.230:6650] Destroyed connection
 
+2022-02-23T09:55:26,224-0500 [pulsar-client-io-1-1] INFO  com.scurrilous.circe.checksum.Crc32cIntChecksum - SSE4.2 CRC32C provider initialized
+----- got message -----
+key:[wthr_sqq_20220223145525], properties:[], content:.wthr_sqq_20220223145525?192.168.1.203�weatherweather"e4:5f:01:8f:3f:6b$1645628125.1793094,0.00042438507080078125106163.7 MB���Af20220223145525_431e1982-36cd-4d04-b24b-a9213bfc67d0&02/23/2022 09:55:26����
+                                                                                                               &02/23/2022 09:55:25{D-DlBff�B�B\��A
 ````
