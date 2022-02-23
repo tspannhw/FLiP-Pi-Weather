@@ -1,0 +1,28 @@
+{
+ "type": "record",
+ "name": "weather",
+ "fields": [
+     {"name": "uuid", "type": "string"},
+     {"name": "ipaddress", "type": "string"},
+     {"name": "cputempf", "type": "int"},
+     {"name": "runtime", "type": "int"},
+     {"name": "host", "type": "string"},
+     {"name": "hostname", "type": "string"},
+     {"name": "macaddress", "type": "string"},
+     {"name": "endtime", "type": "string"},
+     {"name": "te", "type": "string"},
+     {"name": "cpu", "type": "float"},
+     {"name": "diskusage", "type": "string"}, 
+     {"name": "memory", "type": "float"},      
+     {"name": "rowid", "type": "string"},
+     {"name": "systemtime", "type": "string"},
+     {"name": "ts", "type": "int"},
+     {"name": "starttime", "type": "string"},
+     {"name": "pressure", "type": "float"},
+     {"name": "temperature", "type": "float"},
+     {"name": "humidity", "type": "float"},
+     {"name": "devicetemperature", "type": "float"},
+     {"name": "dewpoint", "type": "float"},
+     {"name": "lux", "type": "float"}
+ ]
+}
