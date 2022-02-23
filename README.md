@@ -21,3 +21,17 @@
 {'_required_default': False, '_default': None, '_required': False, 'uuid': 'wthr_dxk_20220223131531', 'ipaddress': '192.168.1.203', 'cputempf': 108, 'runtime': 0, 'host': 'weather', 'hostname': 'weather', 'macaddress': 'e4:5f:01:8f:3f:6b', 'endtime': '1645622131.1316664', 'te': '0.0007994174957275391', 'cpu': 0.2, 'diskusage': '106175.0 MB', 'memory': 25.4, 'rowid': '20220223131531_ea2ae348-eaea-4871-8359-a8aec97fb0d0', 'systemtime': '02/23/2022 08:15:32', 'ts': 1645622132, 'starttime': '02/23/2022 08:15:31', 'pressure': 1010.23, 'temperature': 78.0, 'humidity': 20.11, 'devicetemperature': 92.0, 'dewpoint': 17.26, 'lux': 161.89}
 
 ````
+
+
+### Avro
+
+````
+pip3 install fastavro
+pip3 install pytz
+pip3 install pulsar-client[avro]
+
+
+bin/pulsar-client consume "persistent://public/default/pi-weather-avro" -s "weatherpavroi" -n 0
+
+
+````
