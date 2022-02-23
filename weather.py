@@ -158,5 +158,4 @@ try:
 except KeyboardInterrupt:
     pass
 
-client.flush()
 client.close()
