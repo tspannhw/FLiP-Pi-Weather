@@ -33,5 +33,189 @@ pip3 install pulsar-client[avro]
 
 bin/pulsar-client consume "persistent://public/default/pi-weather-avro" -s "weatherpavroi" -n 0
 
+````
+
+### Example Avro Run
+
+````
+
+root@weather:/opt/demo# python3 weatheravro.py 
+Schema info is: {
+ "type": "record",
+ "name": "weather",
+ "fields": [
+  {
+   "name": "uuid",
+   "type": [
+    "null",
+    "string"
+   ]
+  },
+  {
+   "name": "ipaddress",
+   "type": [
+    "null",
+    "string"
+   ]
+  },
+  {
+   "name": "cputempf",
+   "type": [
+    "null",
+    "int"
+   ]
+  },
+  {
+   "name": "runtime",
+   "type": [
+    "null",
+    "int"
+   ]
+  },
+  {
+   "name": "host",
+   "type": [
+    "null",
+    "string"
+   ]
+  },
+  {
+   "name": "hostname",
+   "type": [
+    "null",
+    "string"
+   ]
+  },
+  {
+   "name": "macaddress",
+   "type": [
+    "null",
+    "string"
+   ]
+  },
+  {
+   "name": "endtime",
+   "type": [
+    "null",
+    "string"
+   ]
+  },
+  {
+   "name": "te",
+   "type": [
+    "null",
+    "string"
+   ]
+  },
+  {
+   "name": "cpu",
+   "type": [
+    "null",
+    "float"
+   ]
+  },
+  {
+   "name": "diskusage",
+   "type": [
+    "null",
+    "string"
+   ]
+  },
+  {
+   "name": "memory",
+   "type": [
+    "null",
+    "float"
+   ]
+  },
+  {
+   "name": "rowid",
+   "type": [
+    "null",
+    "string"
+   ]
+  },
+  {
+   "name": "systemtime",
+   "type": [
+    "null",
+    "string"
+   ]
+  },
+  {
+   "name": "ts",
+   "type": [
+    "null",
+    "int"
+   ]
+  },
+  {
+   "name": "starttime",
+   "type": [
+    "null",
+    "string"
+   ]
+  },
+  {
+   "name": "pressure",
+   "type": [
+    "null",
+    "float"
+   ]
+  },
+  {
+   "name": "temperature",
+   "type": [
+    "null",
+    "float"
+   ]
+  },
+  {
+   "name": "humidity",
+   "type": [
+    "null",
+    "float"
+   ]
+  },
+  {
+   "name": "devicetemperature",
+   "type": [
+    "null",
+    "float"
+   ]
+  },
+  {
+   "name": "dewpoint",
+   "type": [
+    "null",
+    "float"
+   ]
+  },
+  {
+   "name": "lux",
+   "type": [
+    "null",
+    "float"
+   ]
+  }
+ ]
+}
+2022-02-23 09:57:59.515 INFO  [3069385088] ClientConnection:182 | [<none> -> pulsar://pulsar1:6650] Create ClientConnection, timeout=10000
+2022-02-23 09:57:59.515 INFO  [3069385088] ConnectionPool:96 | Created connection for pulsar://pulsar1:6650
+2022-02-23 09:57:59.521 INFO  [3030217792] ClientConnection:368 | [192.168.1.203:41708 -> 192.168.1.230:6650] Connected to broker
+2022-02-23 09:57:59.524 INFO  [3030217792] HandlerBase:64 | [persistent://public/default/pi-weather-avro, ] Getting connection from pool
+2022-02-23 09:57:59.527 INFO  [3030217792] ClientConnection:182 | [<none> -> pulsar://pulsar1:6650] Create ClientConnection, timeout=10000
+2022-02-23 09:57:59.527 INFO  [3030217792] ConnectionPool:96 | Created connection for pulsar://127.0.0.1:6650
+2022-02-23 09:57:59.531 INFO  [3030217792] ClientConnection:370 | [192.168.1.203:41710 -> 192.168.1.230:6650] Connected to broker through proxy. Logical broker: pulsar://127.0.0.1:6650
+2022-02-23 09:57:59.538 INFO  [3030217792] ProducerImpl:189 | [persistent://public/default/pi-weather-avro, ] Created producer on broker [192.168.1.203:41710 -> 192.168.1.230:6650] 
+{'_required_default': False, '_default': None, '_required': False, 'uuid': 'wthr_fxx_20220223145759', 'ipaddress': '192.168.1.203', 'cputempf': 109, 'runtime': 0, 'host': 'weather', 'hostname': 'weather', 'macaddress': 'e4:5f:01:8f:3f:6b', 'endtime': '1645628279.7329316', 'te': '0.0004296302795410156', 'cpu': 0.0, 'diskusage': '106163.7 MB', 'memory': 25.5, 'rowid': '20220223145759_461ff2f9-3efc-4392-95fa-660ebdae884a', 'systemtime': '02/23/2022 09:58:00', 'ts': 1645628280, 'starttime': '02/23/2022 09:57:59', 'pressure': 693.07, 'temperature': 59.0, 'humidity': 79.2, 'devicetemperature': 73.0, 'dewpoint': 18.57, 'lux': 173.08}
+^C2022-02-23 09:58:01.364 INFO  [3069385088] ClientImpl:495 | Closing Pulsar client with 1 producers and 0 consumers
+2022-02-23 09:58:01.364 INFO  [3069385088] ProducerImpl:686 | [persistent://public/default/pi-weather-avro, standalone-1-2227] Closing producer for topic persistent://public/default/pi-weather-avro
+2022-02-23 09:58:01.367 INFO  [3030217792] ProducerImpl:729 | [persistent://public/default/pi-weather-avro, standalone-1-2227] Closed producer
+2022-02-23 09:58:01.368 INFO  [3030217792] ClientConnection:1548 | [192.168.1.203:41710 -> 192.168.1.230:6650] Connection closed
+2022-02-23 09:58:01.368 INFO  [3030217792] ClientConnection:1548 | [192.168.1.203:41708 -> 192.168.1.230:6650] Connection closed
+2022-02-23 09:58:01.407 INFO  [3069385088] ProducerImpl:655 | Producer - [persistent://public/default/pi-weather-avro, standalone-1-2227] , [batching  = off]
+2022-02-23 09:58:01.408 INFO  [3069385088] ClientConnection:256 | [192.168.1.203:41708 -> 192.168.1.230:6650] Destroyed connection
+2022-02-23 09:58:01.408 INFO  [3069385088] ClientConnection:256 | [192.168.1.203:41710 -> 192.168.1.230:6650] Destroyed connection
 
 ````
