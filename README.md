@@ -223,3 +223,50 @@ Schema info is: {
 key:[wthr_sqq_20220223145525], properties:[], content:.wthr_sqq_20220223145525?192.168.1.203�weatherweather"e4:5f:01:8f:3f:6b$1645628125.1793094,0.00042438507080078125106163.7 MB���Af20220223145525_431e1982-36cd-4d04-b24b-a9213bfc67d0&02/23/2022 09:55:26����
                                                                                                                &02/23/2022 09:55:25{D-DlBff�B�B\��A
 ````
+
+
+#### Pulsar SQL
+
+````
+
+use pulsar."public/default";
+
+show tables;
+
+describe "pi-weather";
+      Column       |   Type    | Extra |                                   Comment                                   
+-------------------+-----------+-------+-----------------------------------------------------------------------------
+ uuid              | varchar   |       | ["null","string"]                                                           
+ ipaddress         | varchar   |       | ["null","string"]                                                           
+ cputempf          | integer   |       | ["null","int"]                                                              
+ runtime           | integer   |       | ["null","int"]                                                              
+ host              | varchar   |       | ["null","string"]                                                           
+ hostname          | varchar   |       | ["null","string"]                                                           
+ macaddress        | varchar   |       | ["null","string"]                                                           
+ endtime           | varchar   |       | ["null","string"]                                                           
+ te                | varchar   |       | ["null","string"]                                                           
+ cpu               | real      |       | ["null","float"]                                                            
+ diskusage         | varchar   |       | ["null","string"]                                                           
+ memory            | real      |       | ["null","float"]                                                            
+ rowid             | varchar   |       | ["null","string"]                                                           
+ systemtime        | varchar   |       | ["null","string"]                                                           
+ ts                | integer   |       | ["null","int"]                                                              
+ starttime         | varchar   |       | ["null","string"]                                                           
+ pressure          | real      |       | ["null","float"]                                                            
+ temperature       | real      |       | ["null","float"]                                                            
+ humidity          | real      |       | ["null","float"]                                                            
+ devicetemperature | real      |       | ["null","float"]                                                            
+ dewpoint          | real      |       | ["null","float"]                                                            
+ lux               | real      |       | ["null","float"]                                                            
+ __partition__     | integer   |       | The partition number which the message belongs to                           
+ __event_time__    | timestamp |       | Application defined timestamp in milliseconds of when the event occurred    
+ __publish_time__  | timestamp |       | The timestamp in milliseconds of when event as published                    
+ __message_id__    | varchar   |       | The message ID of the message used to generate this row                     
+ __sequence_id__   | bigint    |       | The sequence ID of the message used to generate this row                    
+ __producer_name__ | varchar   |       | The name of the producer that publish the message used to generate this row 
+ __key__           | varchar   |       | The partition key for the topic                                             
+ __properties__    | varchar   |       | User defined properties                                                     
+(30 rows)
+ 
+
+````
