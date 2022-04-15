@@ -268,5 +268,29 @@ describe "pi-weather";
  __properties__    | varchar   |       | User defined properties                                                     
 (30 rows)
  
+select * from pulsar."public/default"."pi-weather";
+
+          uuid           |   ipaddress   | cputempf | runtime |  host   | hostname |    macaddress     |      endtime       |           te  
+-------------------------+---------------+----------+---------+---------+----------+-------------------+--------------------+---------------
+ wthr_jxm_20220415200425 | 192.168.1.203 |      106 |       0 | weather | weather  | e4:5f:01:8f:3f:6b | 1650053065.5075643 | 0.000751972198
+ wthr_jrg_20220415200426 | 192.168.1.203 |      105 |       0 | weather | weather  | e4:5f:01:8f:3f:6b | 1650053066.5556061 | 0.000745296478
+ wthr_pya_20220415200427 | 192.168.1.203 |      106 |       0 | weather | weather  | e4:5f:01:8f:3f:6b | 1650053067.7026055 | 0.000663518905
+ wthr_lxx_20220415200428 | 192.168.1.203 |      106 |       0 | weather | weather  | e4:5f:01:8f:3f:6b | 1650053068.751889  | 0.000751972198
+ wthr_nrf_20220415200429 | 192.168.1.203 |      108 |       0 | weather | weather  | e4:5f:01:8f:3f:6b | 1650053069.7996137 | 0.000750780105
+ wthr_gxo_20220415200430 | 192.168.1.203 |      106 |       0 | weather | weather  | e4:5f:01:8f:3f:6b | 1650053070.846855  | 0.000739574432
+ wthr_uxp_20220415200431 | 192.168.1.203 |      106 |       0 | weather | weather  | e4:5f:01:8f:3f:6b | 1650053071.8950646 | 0.000780105590
+ wthr_gia_20220415200432 | 192.168.1.203 |      105 |       0 | weather | weather  | e4:5f:01:8f:3f:6b | 1650053072.9443476 | 0.000747919082
+ wthr_pum_20220415200433 | 192.168.1.203 |      105 |       0 | weather | weather  | e4:5f:01:8f:3f:6b | 1650053073.9923508 | 0.000739574432
+ wthr_yas_20220415200435 | 192.168.1.203 |      107 |       0 | weather | weather  | e4:5f:01:8f:3f:6b | 1650053075.041469  | 0.000785827636
+ wthr_gaf_20220415200436 | 192.168.1.203 |      106 |       0 | weather | weather  | e4:5f:01:8f:3f:6b | 1650053076.0893412 | 0.000747442245
+ wthr_xxq_20220415200437 | 192.168.1.203 |      107 |       0 | weather | weather  | e4:5f:01:8f:3f:6b | 1650053077.1381607 | 0.000740051269
+ wthr_xxw_20220415200438 | 192.168.1.203 |      107 |       0 | weather | weather  | e4:5f:01:8f:3f:6b | 1650053078.186877  | 0.000748157501
+ wthr_djv_20220415200439 | 192.168.1.203 |      107 |       0 | weather | weather  | e4:5f:01:8f:3f:6b | 1650053079.235591  | 0.000744581222
+ wthr_urp_20220415200440 | 192.168.1.203 |      108 |       0 | weather | weather  | e4:5f:01:8f:3f:6b | 1650053080.2825677 | 0.000787973403
+ 
+ select pressure, temperature , humidity , devicetemperature , dewpoint ,lux , uuid, cputempf, "__message_id__" , 
+       endtime  
+from pulsar."public/default"."pi-weather"
+
 
 ````
